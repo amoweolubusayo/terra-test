@@ -1,4 +1,8 @@
-resource "azurerm_resource_group" "example" {
-  name     = "example"
-  location = "West Europe"
+provider "azurerm" {
+  version = "=2.0.0"
+  features { }  
+}
+resource "azurerm_resource_group" "rg" {
+  name     = var.resourceGroupName
+  location = var.location
 }
